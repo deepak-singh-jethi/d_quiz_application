@@ -7,7 +7,7 @@ import { QusAnsContext } from "../Context/QusAnsContext";
 import ResultPage from "./ResultPage";
 
 function ExamPage({ setDisplayPage }) {
-  const { score, finalSubmit } = useContext(QusAnsContext);
+  const { finalSubmit } = useContext(QusAnsContext);
 
   return (
     <>
@@ -22,7 +22,7 @@ function ExamPage({ setDisplayPage }) {
           </div>
         </section>
       ) : (
-        <ResultPage score={score} setDisplayPage={setDisplayPage}></ResultPage>
+        <ResultPage setDisplayPage={setDisplayPage}></ResultPage>
       )}
     </>
   );

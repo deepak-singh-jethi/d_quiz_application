@@ -40,15 +40,28 @@ export default function QusAnsProvider({ children }) {
   }
 
   function handleFinalSubmit() {
-    //calculate score
-    const scorecalc = qusAns.reduce((acc, question, index) => {
-      if (question.selectedAns === question.correct_answer) {
-        return acc + 1;
+    // calculate score by iterating and checking
+    // if the selected answer is correct or not
+    let sccl = 0;
+    let size = 0;
+
+    qusAns.forEach((qus, index) => {
+      //check if selectedAns not undefined
+      if (qus.selectedAns) {
+        size++;
+        if (qus.selectedAns === qus.correct_answer) {
+          sccl++;
+        }
       }
-      return acc;
     });
 
-    setScore(scorecalc);
+    if (sccl === 0) {
+      setScore("0%");
+    } else {
+      const finalScore = (sccl / size) * 100;
+      setScore(`${finalScore}%`);
+    }
+
     setFinalSubmit(true);
   }
 
@@ -61,6 +74,7 @@ export default function QusAnsProvider({ children }) {
     handleFinalSubmit,
     finalSubmit,
     score,
+    setFinalSubmit,
   };
 
   return (

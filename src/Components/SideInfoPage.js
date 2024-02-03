@@ -3,8 +3,6 @@ import { QusAnsContext } from "../Context/QusAnsContext";
 
 function SideInfoPage() {
   const { setSelectedIndex, qusAns } = useContext(QusAnsContext);
-  console.log(qusAns);
-
   return (
     <div className="flex flex-col items-center max-h-screen overflow-y-auto mb-5 qus">
       <h1 className="text-center m-4 text-xl sm:text-xl">Qus Status</h1>
