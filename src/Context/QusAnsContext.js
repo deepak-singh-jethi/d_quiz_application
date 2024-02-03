@@ -59,7 +59,8 @@ export default function QusAnsProvider({ children }) {
       setScore("0%");
     } else {
       const finalScore = (sccl / size) * 100;
-      setScore(`${finalScore}%`);
+      const roundedScore = finalScore.toFixed(2);
+      setScore(`${roundedScore}%`);
     }
 
     setFinalSubmit(true);

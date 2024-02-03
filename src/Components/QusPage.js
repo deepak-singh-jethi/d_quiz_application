@@ -117,7 +117,7 @@ function QusPage() {
       <button
         onClick={handleSubmitAll}
         className={`${buttonStyle} mt-10 bg-red-500`}>
-        Submit
+        Submit All
       </button>
     </div>
   );
