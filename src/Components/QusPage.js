@@ -113,12 +113,12 @@ function QusPage() {
         <button onClick={handleSubmit} className={buttonStyle}>
           Submit
         </button>
-        <button
-          onClick={handleSubmitAll}
-          className={`${buttonStyle} hover:bg-red-600`}>
-          Submit All
-        </button>
       </div>
+      <button
+        onClick={handleSubmitAll}
+        className={`${buttonStyle} mt-10 bg-red-500`}>
+        Submit
+      </button>
     </div>
   );
 }

@@ -16,8 +16,8 @@ function SideInfoPage() {
           className={`bg-cyan-600 mb-7 w-16 h-16 p-2 ${
             item.selectedAns === undefined
               ? " bg-cyan-300 text-stone-800 "
-              : " bg-green-400"
-          } hover:bg-cyan-600 hover:text-stone-50  rounded-md`}>
+              : " bg-green-500"
+          } hover:bg-cyan-200 hover:text-stone-800  rounded-md`}>
           {index + 1}
         </button>
       ))}
