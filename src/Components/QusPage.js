@@ -20,14 +20,14 @@ function QusPage() {
 
   const [userSelection, setUserSelection] = useState(undefined);
 
-  //handleSkip
+  //TODO handleSkip
+
   function handleSkip() {
     const updatedQus = qusAns.map((qus, index) =>
-      index === selectedIndex ? { ...qus, selectedAns: null } : qus
+      index === selectedIndex ? { ...qus, selectedAns: undefined } : qus
     );
 
     setQusAns(updatedQus);
-
     if (selectedIndex === qusAns.length - 1) {
       return;
     }

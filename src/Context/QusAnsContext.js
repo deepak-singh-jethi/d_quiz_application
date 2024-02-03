@@ -47,6 +47,7 @@ export default function QusAnsProvider({ children }) {
       }
       return acc;
     });
+
     setScore(scorecalc);
     setFinalSubmit(true);
   }
