@@ -43,12 +43,11 @@ export default function QusAnsProvider({ children }) {
     // calculate score by iterating and checking
     // if the selected answer is correct or not
     let sccl = 0;
-    let size = 0;
+    let size = qusAns.length;
 
     qusAns.forEach((qus, index) => {
       //check if selectedAns not undefined
       if (qus.selectedAns) {
-        size++;
         if (qus.selectedAns === qus.correct_answer) {
           sccl++;
         }
