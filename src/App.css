@@ -37,7 +37,8 @@ select {
     font-size: 16px;
 }
 
-.quaPage{
+.quaPage,
+.eval{
     animation: from-top-bottom 0.8s ease;
 }
 .qus{
