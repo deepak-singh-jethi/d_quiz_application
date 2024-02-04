@@ -10,10 +10,8 @@ function ShowEvaluation() {
   };
 
   return (
-    <div className="min-h-screen max-w-fit mx-4 sm:mx-10 eval">
-      <div
-        className="w-full overflow-x-auto overflow-y-scroll"
-        style={{ maxHeight: "600px" }}>
+    <div className="min-h-screen max-w-fit mx-6 sm:mx-10 eval">
+      <div className="w-full overflow-x-auto " style={{ maxHeight: "600px" }}>
         <div className="relative">
           <table className="min-w-full bg-white border border-gray-300 ">
             <thead className="sticky top-0 bg-white z-100">
