@@ -8,11 +8,11 @@
 }
 
 body {
-   background-color: white;
-   
-    min-height: 100vh;
+    background-color: white;
+    width: 120dvw;
     font-family: 'Roboto Mono', monospace;
     overflow: hidden !important;
+    overflow-x: hidden;
 }
 
 .App{

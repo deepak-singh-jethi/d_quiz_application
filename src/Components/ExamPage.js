@@ -1,5 +1,4 @@
 // ExamPage.jsx
-
 import React, { useContext, useState } from "react";
 import QusPage from "./QusPage";
 import SideInfoPage from "./SideInfoPage";
@@ -9,17 +8,19 @@ import ShowEvaluation from "./ShowEvaluation";
 
 function ExamPage({ setDisplayPage }) {
   const { finalSubmit } = useContext(QusAnsContext);
-  const [showEvaluation, setShowEvaluation] = useState(true);
+  const [showEvaluation, setShowEvaluation] = useState();
 
   return (
     <>
       {!finalSubmit ? (
-        <section className="flex gap-2">
-          <aside className="sm:w-16 bg-sky-800 text-slate-100  h-screen mt-6 rounded-tr-xl text-center md:w-40  lg:w-60 ">
-            <SideInfoPage />
+        <section className="flex gap-9">
+          <aside className="sm:w-14 bg-sky-800 text-slate-100 h-screen mt-6 rounded-tr-xl text-center md:w-40 lg:w-40">
+            <div className="flex flex-col justify-start items-center w-full gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14 h-full">
+              <SideInfoPage />
+            </div>
           </aside>
 
-          <div className="w-full p-4 flex justify-center items-center quaPage">
+          <div className="flex  flex-grow flex-col justify-center items-center  quaPage overflow-x-hidden gap-8 ">
             <QusPage />
           </div>
         </section>

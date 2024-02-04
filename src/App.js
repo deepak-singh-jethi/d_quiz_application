@@ -14,7 +14,7 @@ function App() {
       {displayPage !== "testPage" && (
         <div className="App ">
           {displayPage !== "testPage" && (
-            <h1 className="flex justify-center items-center text-center text-stone-600 font-mono pt-16 font-bold text-4xl ">
+            <h1 className="flex justify-center items-center text-center text-stone-600 font-mono font-bold text-4xl ">
               D-Quiz APP
             </h1>
           )}

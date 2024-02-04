@@ -2,10 +2,10 @@ import React, { useContext, useState } from "react";
 import { QusAnsContext } from "../Context/QusAnsContext";
 
 const buttonStyle =
-  "px-8 py-3 bg-blue-700 text-stone-100 hover:bg-green-700 hover:text-stone-200 rounded-lg";
+  "px-3 sm:px-4 py-1 sm:py-2 bg-blue-700 text-stone-100 hover:bg-green-700 hover:text-stone-200 rounded-lg mb-2 sm:mb-0";
 
 const optionStyle =
-  "px-4 py-2 text-xs sm:text-sm md:text-base lg:text-lg mb-4 rounded-lg w-full";
+  "px-4 py-2 text-xs sm:text-sm md:text-base lg:text-lg mb-4 rounded-lg w-4/5";
 
 function QusPage() {
   const {
@@ -62,12 +62,12 @@ function QusPage() {
   }
 
   return (
-    <div className="flex flex-col gap-10 w-screen h-screen sm:w-1/2 justify-center items-center">
-      <h2 className="sm:h-[100px]  mt-4 font-extrabold text-base sm:text-xs md:text-xl lg:text-2xl">
-        <span>Qus:{selectedIndex + 1}</span>{" "}
+    <div>
+      <h2 className="sm:h-[100px] my-4 font-extrabold text-sm sm:text-xs md:text-base lg:text-lg xl:text-xl w-3/5 mt-10">
+        <span className="text-red-400">Qus:{selectedIndex + 1}</span>{" "}
         <span dangerouslySetInnerHTML={{ __html: question }} />
       </h2>
-      <div className="w-full">
+      <div className="w-4/5">
         <p
           onClick={() => handleOptionClick(options[0])}
           className={`${optionStyle} ${
@@ -106,19 +106,24 @@ function QusPage() {
         />
       </div>
 
-      <div className="w-full mt-4 flex items-start justify-around">
-        <button onClick={handleSkip} className={buttonStyle}>
-          Skip
-        </button>
-        <button onClick={handleSubmit} className={buttonStyle}>
-          Submit
+      <div className="w-4/5 mt-12  flex items-center ">
+        <div className="flex justify-between w-[80%]">
+          <button onClick={handleSkip} className={buttonStyle}>
+            Skip
+          </button>
+          <button onClick={handleSubmit} className={buttonStyle}>
+            Submit
+          </button>
+        </div>
+      </div>
+
+      <div className="flex justify-start mt-10 items-center ">
+        <button
+          onClick={handleSubmitAll}
+          className={`${buttonStyle} mt-10 bg-red-500 self-center`}>
+          Submit All
         </button>
       </div>
-      <button
-        onClick={handleSubmitAll}
-        className={`${buttonStyle} mt-10 bg-red-500`}>
-        Submit All
-      </button>
     </div>
   );
 }

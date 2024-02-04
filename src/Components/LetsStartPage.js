@@ -18,7 +18,7 @@ function LetsStartPage({ onDisplayPage }) {
       <p className="w-full text-center mt-5">
         <button
           onClick={handleClick}
-          className="btn btn-outline btn-success px-5 mt-3">
+          className="btn btn-outline  px-5 mt-3 bg-sky-600 text-stone-50 hover:bg-green-600 hover:border-2 hover:border-white cursor-pointer">
           Start
         </button>
       </p>
