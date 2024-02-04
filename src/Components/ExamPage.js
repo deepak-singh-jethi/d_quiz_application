@@ -1,13 +1,15 @@
 // ExamPage.jsx
 
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import QusPage from "./QusPage";
 import SideInfoPage from "./SideInfoPage";
 import { QusAnsContext } from "../Context/QusAnsContext";
 import ResultPage from "./ResultPage";
+import ShowEvaluation from "./ShowEvaluation";
 
 function ExamPage({ setDisplayPage }) {
   const { finalSubmit } = useContext(QusAnsContext);
+  const [showEvaluation, setShowEvaluation] = useState(true);
 
   return (
     <>
@@ -22,7 +24,12 @@ function ExamPage({ setDisplayPage }) {
           </div>
         </section>
       ) : (
-        <ResultPage setDisplayPage={setDisplayPage}></ResultPage>
+        <div className="grid rid-rows-1 w-screen overflow-y-scroll place-items-center ">
+          <ResultPage
+            setDisplayPage={setDisplayPage}
+            setShowEvaluation={setShowEvaluation}></ResultPage>
+          {showEvaluation && <ShowEvaluation></ShowEvaluation>}
+        </div>
       )}
     </>
   );
