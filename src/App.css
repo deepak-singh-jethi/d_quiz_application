@@ -9,10 +9,10 @@
 
 body {
     background-color: white;
-    width: 120dvw;
+    width: 100vw;
     font-family: 'Roboto Mono', monospace;
     overflow: hidden !important;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 .App{
@@ -23,6 +23,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 40px;
+    overflow-x: hidden !important;
 
     animation: from-top-bottom 0.8s ease;
 }
@@ -78,6 +79,15 @@ select {
 
     .side{
        width: 60px;
+    }
+}
+
+@media only screen and (max-width:450px) {
+
+    .tablez {
+        font-size: 8px;
+        width: 300px !important;
+        margin: 4px !important;
     }
 }
 

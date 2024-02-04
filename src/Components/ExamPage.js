@@ -24,7 +24,7 @@ function ExamPage({ setDisplayPage }) {
           </div>
         </section>
       ) : (
-        <div className="grid rid-rows-1 w-screen overflow-y-scroll place-items-center ">
+        <div className="grid rid-rows-1 overflow-y-scroll place-items-center ">
           <ResultPage
             setDisplayPage={setDisplayPage}
             setShowEvaluation={setShowEvaluation}></ResultPage>
