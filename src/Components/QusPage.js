@@ -62,11 +62,14 @@ function QusPage() {
   }
 
   return (
-    <div>
-      <h2 className="sm:h-[100px] my-4 font-extrabold text-sm sm:text-xs md:text-base lg:text-lg xl:text-xl w-3/5 mt-10">
-        <span className="text-red-400">Qus:{selectedIndex + 1}</span>{" "}
-        <span dangerouslySetInnerHTML={{ __html: question }} />
-      </h2>
+    <>
+      <div className="w-3/5 mb-3">
+        <h2 className="sm:h-[150px] font-extrabold text-sm sm:text-xs md:text-base lg:text-lg xl:text-xl  mt-10  ">
+          <span className="text-red-400">Qus:{selectedIndex + 1}</span>{" "}
+          <span dangerouslySetInnerHTML={{ __html: question }} />
+        </h2>
+      </div>
+
       <div className="w-4/5">
         <p
           onClick={() => handleOptionClick(options[0])}
@@ -117,14 +120,14 @@ function QusPage() {
         </div>
       </div>
 
-      <div className="flex justify-start mt-10 items-center ">
+      <div className="flex justify-start mt-4 items-center ">
         <button
           onClick={handleSubmitAll}
-          className={`${buttonStyle} mt-10 bg-red-500 self-center`}>
+          className={`${buttonStyle} mt-8 bg-red-500 self-center`}>
           Submit All
         </button>
       </div>
-    </div>
+    </>
   );
 }
 export default QusPage;
