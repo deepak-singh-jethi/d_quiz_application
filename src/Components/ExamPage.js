@@ -19,7 +19,7 @@ function ExamPage({ setDisplayPage }) {
             </div>
           </aside>
 
-          <div className="flex flex-grow flex-col justify-center items-start quaPage overflow-x-hidden gap-2 sm:mx-4 md:mx-12 lg:mx-16">
+          <div className="flex flex-grow flex-col justify-center items-start quaPage overflow-x-hidden gap-2 sm:mx-4 md:mx-12 lg:mx-16 relative">
             <QusPage />
           </div>
         </section>

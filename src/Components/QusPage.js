@@ -1,5 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { QusAnsContext } from "../Context/QusAnsContext";
+import Modal from "./Modal";
+import CloseConfirm from "./CloseConfirm";
 
 const buttonStyle =
   "px-3 sm:px-4 py-1 sm:py-2 bg-blue-700 text-stone-100 hover:bg-green-700 hover:text-stone-200 rounded-lg mb-2 sm:mb-0";
@@ -8,6 +10,7 @@ const optionStyle =
   "px-4 py-2 text-xs sm:text-sm md:text-base lg:text-lg mb-4 rounded-lg w-4/5";
 
 function QusPage() {
+  const modal = useRef();
   const {
     qusAns,
     selectedIndex,
@@ -56,13 +59,32 @@ function QusPage() {
 
   //handle submit all
   function handleSubmitAll() {
+    modal.current.open();
+
+    // handleFinalSubmit(true);
+    // setSelectedIndex(0);
+    // setUserSelection(undefined);
+  }
+
+  function handleSubmitConfirm() {
     handleFinalSubmit(true);
     setSelectedIndex(0);
     setUserSelection(undefined);
+    modal.current.close();
+  }
+
+  function handleSubmitCancel() {
+    modal.current.close();
   }
 
   return (
     <>
+      <Modal ref={modal}>
+        <CloseConfirm
+          onConfirm={handleSubmitConfirm}
+          onCancel={handleSubmitCancel}></CloseConfirm>
+      </Modal>
+
       <div className="w-3/5 mb-3">
         <h2 className="sm:h-[150px] font-extrabold text-sm sm:text-xs md:text-base lg:text-lg xl:text-xl  mt-10  ">
           <span className="text-red-400">Qus:{selectedIndex + 1}</span>{" "}
