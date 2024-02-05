@@ -39,10 +39,10 @@ select {
 }
 
 .quaPage,
-.eval{
+.eval,.dialog{
     animation: from-top-bottom 0.8s ease;
 }
-.qus{
+.dialog{
     animation: from-top-bottom 0.8s ease;
 }
 
