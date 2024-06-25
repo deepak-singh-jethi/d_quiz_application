@@ -5,7 +5,7 @@ import { QusAnsContext } from "../Context/QusAnsContext";
 
 const divClass = "flex justify-between w-full flex-col gap-2 pb-5";
 const selectClass =
-  "text-stone-600 focus:border-blue-900 px-4 py-3 rounded-md focus:outline-none";
+  "text-stone-100 focus:border-blue-900 px-4 py-3 rounded-md focus:outline-none";
 
 function Home({ onDisplayPage }) {
   const [inputs, setInputs] = useState({
