@@ -37,10 +37,7 @@ animation: from-top-bottom 0.8s ease;
 select {
     font-size: 16px;
 }
-option{
-    background-color: white
-    color:black;
-}
+
 
 .quaPage,
 .eval,.dialog{
